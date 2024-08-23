@@ -1,0 +1,19 @@
+DISCID=
+ALBUM=
+ARTIST=
+GENRE=
+DATE=
+COMMENT=2024-07-19
+COMPILATION=
+DISCNUMBER=1
+TOTALDISCS=1
+ALBUMARTIST=
+## example.cue-------------------------
+GENRE=Ska
+DATE=1991
+DISCID=D00DA810
+COMPILATION=1
+COMMENT=ExactAudioCopy v0.95b4
+ARTIST=The Specials
+ALBUM=Singles
+## -------------------------
