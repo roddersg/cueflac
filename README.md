@@ -77,6 +77,7 @@ These programs/scripts allow you to convert single flac files (which form an alb
 ### gettagfromtemplate.py
 
 - extracts the tags from the template file and returns a tagdict()
+- renames ARTIST, ALBUMARTIST placing "The" at the back
 
 ### makecuesheetheader.py, makecuesheettracks.py
 

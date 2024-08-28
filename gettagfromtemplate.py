@@ -59,6 +59,13 @@ def get_tag_from_template(templatefile: str = "template") -> dict:
             tag, value = line.split("=")
             value = value.strip(" ")
             tag = tag.upper()
+            # check for artist, switch the "The"
+            if tag == "ARTIST":
+                if value.startswith("The"):
+                    value = value[4:] + ", The"
+            if tag == "ALBUMARTIST":
+                if value.startswith("The"):
+                    value = value[4:] + ", The"
             if tag in tagdict.keys():
                 tagdict[tag] = value
 
