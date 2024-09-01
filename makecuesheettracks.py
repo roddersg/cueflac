@@ -50,7 +50,11 @@ def make_cuesheet_tracks(tagdict: dict) -> str:
         tracksection = ""
         for cnt, title in enumerate(ntitles):
             tracksection += f"{INDENT}TRACK {trackinfo[cnt][0]}\n"
-            tracksection += f'{INDENT}{INDENT}PERFORMER "{title[perfpos].strip()}"\n'
+            # fix any artist "The"
+            p = title[perfpos].strip()
+            if p.startswith("The "):
+                p = p[4:] + ", The"
+            tracksection += f'{INDENT}{INDENT}PERFORMER "{p}"\n'
             tracksection += f'{INDENT}{INDENT}TITLE "{title[titlepos].strip()}"\n'
             for ele in trackinfo[cnt][1:]:
                 if ele is not None:
